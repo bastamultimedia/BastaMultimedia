@@ -17,6 +17,7 @@
 <?php
 $post = get_post();
 $type = get_post_type();
+$home = is_home();
 ?>
 
 <body>
