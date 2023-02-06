@@ -1,0 +1,82 @@
+@charset "UTF-8";
+h2.is-in-full-medium {
+  width: 80%;
+  margin: 0 auto;
+}
+h2.is-in-full-large {
+  width: 90%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1550px) {
+  section.container-large {
+    width: 1400px !important;
+  }
+}
+@media screen and (min-width: 1550px) {
+  section.container-x-large {
+    width: 1400px !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  section.container-medium {
+    width: 90% !important;
+  }
+}
+@media screen and (min-width: 1550px) {
+  section.container-medium {
+    width: 1400px !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  section.container-small {
+    width: 90% !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  section.container-xsmall {
+    width: 90% !important;
+  }
+}
+
+@media screen and (min-width: 1550px) {
+  div.wp-block-cover.is-not-main {
+    width: 1400px !important;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  div.container-small {
+    width: 90% !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  div.container-xsmall {
+    width: 90% !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  div.container-medium {
+    width: 90% !important;
+  }
+}
+
+.flickity-slider {
+  display: flex;
+  align-items: center;
+}
+
+/* spécifications particulières */
+.wp-block-image {
+  margin: 0 !important;
+}
+
+/*# sourceMappingURL=endpoint.css.map */

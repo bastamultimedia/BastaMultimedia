@@ -1,0 +1,87 @@
+@import "responsive";
+
+h2{
+  &.is-in-full-medium{
+    width: 80%;
+    margin: 0 auto;
+  }
+  &.is-in-full-large{
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+a{text-decoration: none}
+
+strong, b{
+  font-weight: bold;
+}
+
+section{
+  &.container-large{
+    @include media-min(1550px){
+      width: 1400px !important;
+    }
+  }
+  &.container-x-large{
+    @include media-min(1550px){
+      width: 1400px !important;
+    }
+  }
+  &.container-medium{
+    @include media-max(600px){
+      width: 90%!important;
+    }
+    @include media-min(1550px){
+      width: 1400px !important;
+    }
+  }
+
+  &.container-small{
+    @include media-max(600px){
+      width: 90%!important;
+    }
+  }
+
+  &.container-xsmall{
+    @include media-max(600px){
+      width: 90%!important;
+    }
+  }
+}
+
+div{
+  &.wp-block-cover.is-not-main{
+    @include media-min(1550px){
+      width: 1400px !important;
+      margin: 0 auto;
+    }
+  }
+  &.container-small{
+    @include media-max(600px){
+      width: 90%!important;
+    }
+  }
+
+  &.container-xsmall{
+    @include media-max(600px){
+      width: 90%!important;
+    }
+  }
+  &.container-medium {
+    @include media-max(600px) {
+      width: 90% !important;
+    }
+  }
+}
+
+.flickity-slider{
+  display: flex;
+  align-items: center;
+}
+
+/* spécifications particulières */
+
+.wp-block-image {
+  margin: 0!important;
+}
