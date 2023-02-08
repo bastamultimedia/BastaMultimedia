@@ -4,10 +4,19 @@ h2{
   &.is-in-full-medium{
     width: 80%;
     margin: 0 auto;
+    @include media-max(600px){
+      width: 90%!important;
+    }
+    @include media-min(1550px){
+      width: 1400px !important;
+    }
   }
   &.is-in-full-large{
     width: 90%;
     margin: 0 auto;
+    @include media-min(1550px){
+      width: 1400px !important;
+    }
   }
 }
 
@@ -98,6 +107,13 @@ div{
   }
   @include media-max(600px){
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  h4{
+    margin-top: 25px;
+    margin-bottom: 5px;
+    padding-bottom: 25px;
+    border-bottom: solid 1px;
   }
 
   a {
