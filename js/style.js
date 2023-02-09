@@ -12,6 +12,7 @@ function scrollerTop(){
     })
 }
 function bs_scroll(){
+    let header = $('header')
     let windowWidth = window.innerWidth;
     $(window).on('scroll', function (){
         //haut de l'écran
@@ -23,6 +24,13 @@ function bs_scroll(){
             for (let i=0; i< $('.single-content h2').length; i++){
                 aside_trigger(i, scrollMiddleScreen)
             }
+        }
+
+        if (window.innerWidth > 900){
+            header.addClass('scroll')
+        }
+        if ($(window).scrollTop() === 0 || $('body').hasClass('menu')){
+            header.removeClass('scroll')
         }
     })
 }
