@@ -49,3 +49,20 @@ function url_logo_personnalise() {
     return 'https://bastamultimedia.com';
 }
 add_filter( 'login_headerurl', 'url_logo_personnalise' );
+
+function bs_register_newsletter_admin() {
+    add_menu_page(
+        __( 'Basta Multimédia', 'basta_2022' ),
+        'Basta Multimedia',
+        'manage_options',
+        'bs-multimedia',
+        'show_menu_bs',
+        'dashicons-groups',
+        2
+    );
+}
+add_action( 'admin_menu', 'bs_register_newsletter_admin' );
+
+function show_menu_bs () {
+    require_once (get_template_directory(). '/admin/admin-basta.php');
+}
