@@ -51,6 +51,10 @@ div{
 .flickity-slider{
   display: flex;
   align-items: center;
+  .carousel-cell{
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /* spécifications particulières */

@@ -32,61 +32,30 @@ strong, b {
 }
 
 @media screen and (min-width: 1550px) {
-  section.container-large {
-    width: 1400px !important;
-  }
-}
-@media screen and (min-width: 1550px) {
-  section.container-x-large {
-    width: 1400px !important;
-  }
-}
-@media screen and (max-width: 600px) {
-  section.container-medium {
-    width: 90% !important;
-  }
-}
-@media screen and (min-width: 1550px) {
-  section.container-medium {
-    width: 1400px !important;
-  }
-}
-@media screen and (max-width: 600px) {
-  section.container-small {
-    width: 90% !important;
-  }
-}
-@media screen and (max-width: 600px) {
-  section.container-xsmall {
-    width: 90% !important;
-  }
-}
-
-@media screen and (min-width: 1550px) {
   div.wp-block-cover.is-not-main {
     width: 1400px !important;
     margin: 0 auto;
   }
 }
-@media screen and (max-width: 600px) {
-  div.container-small {
-    width: 90% !important;
+@media screen and (min-width: 1550px) {
+  div.wp-block-group {
+    width: 1400px !important;
+    margin: 0 auto;
   }
 }
-@media screen and (max-width: 600px) {
-  div.container-xsmall {
-    width: 90% !important;
-  }
-}
-@media screen and (max-width: 600px) {
-  div.container-medium {
-    width: 90% !important;
+@media screen and (min-width: 1550px) {
+  div.wp-block-group > * {
+    max-width: 100% !important;
   }
 }
 
 .flickity-slider {
   display: flex;
   align-items: center;
+}
+.flickity-slider .carousel-cell {
+  display: flex;
+  justify-content: center;
 }
 
 /* spécifications particulières */
