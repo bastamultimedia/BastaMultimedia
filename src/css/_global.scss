@@ -127,16 +127,11 @@ div{
   }
 
   .bs-single-column{
-    h2{
-      &:not(:first-child){
-        margin-top: 80px;
+    &.single-content .wp-block-group{
+      @include media-min(1550px){
+        width: 100%!important;
       }
-      margin-bottom: 25px;
     }
-    p{
-      margin: 15px 0;
-    }
-
     &:nth-child(1){
       width: 25%;
       @include media-max(782px){

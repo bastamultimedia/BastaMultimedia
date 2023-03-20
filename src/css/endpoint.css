@@ -123,14 +123,10 @@ strong, b {
     flex-direction: column;
   }
 }
-.bs-single-columns .bs-single-column h2 {
-  margin-bottom: 25px;
-}
-.bs-single-columns .bs-single-column h2:not(:first-child) {
-  margin-top: 80px;
-}
-.bs-single-columns .bs-single-column p {
-  margin: 15px 0;
+@media screen and (min-width: 1550px) {
+  .bs-single-columns .bs-single-column.single-content .wp-block-group {
+    width: 100% !important;
+  }
 }
 .bs-single-columns .bs-single-column:nth-child(1) {
   width: 25%;

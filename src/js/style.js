@@ -1,6 +1,6 @@
 function menu_burger(){
     $('.menu-burger').on("click", function (){
-        $(this).parent().toggleClass('active')
+        $('header').toggleClass('burger')
     })
 }
 function scrollerTop(){
@@ -66,29 +66,11 @@ function aside(){
         aside_item.eq(index).text(content)
     })
 }
-
-function aside_responsive(){
-    $('.bs-single-columns').prepend('<aside class= "back-item"></aside>')
-
-    let back_item = $('.back-item')
-    back_item.css('margin-left', window.innerWidth - 75)
-
-    $(window).on('resize', function (){
-        back_item.css('margin-left', window.innerWidth - 75)
-    })
-
-    back_item.on('click', function (){
-        window.scrollTo({
-            top: $('.bs-single-columns').offset().top,
-            behavior: 'smooth'
-        });
-    })
-}
 function aside_trigger(index, line){
     let title = $('.single-content h2');
-    let spacer = $('.wp-block-spacer');
-    let top = title.eq(index).offset().top
-    let bottom = spacer.eq(index).offset().top
+    let spacer = $('.single-content .wp-block-group');
+    let top = spacer.eq(index).offset().top
+    let bottom = spacer.eq(index).offset().top + spacer.eq(index).height()
     let aside_item = $('.bs-aside a');
 
     if (title.length){
@@ -117,20 +99,14 @@ $(function (){
 
     if ($('.bs-aside').length){
         aside()
-        $(window).on('resize', function (){
+        $(window).resize(function (){
             aside_height()
             if(windowWidth > 782){
                 aside_height()
             }
-            if (windowWidth < 782){
-                aside_responsive()
-            }
         })
         if(windowWidth > 782){
             aside_height()
-        }
-        if (windowWidth < 782){
-            aside_responsive()
         }
     }
 })
