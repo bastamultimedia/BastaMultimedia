@@ -86,6 +86,23 @@ function aside_height(){
     aside.css('max-height', window.innerHeight - 100)
 }
 
+function scrollTrigger(item, dist){
+    let windowWidth = window.innerWidth;
+
+    $(window).on('scroll', function (){
+        //haut de l'écran
+        let scrollTopScreen = $(window).scrollTop()
+        //milieu de l'écran
+        let scrollMiddleScreen = scrollTopScreen + (window.innerHeight / 2)
+
+        item.each(function (index){
+            if (scrollMiddleScreen > item.eq(index).offset().top - dist){
+                item.eq(index).addClass('animate')
+            }
+        })
+    })
+}
+
 $(function (){
     let windowWidth = window.innerWidth;
 
@@ -109,4 +126,12 @@ $(function (){
             aside_height()
         }
     }
+
+    let slideFade = $('.slide-fade-effect')
+
+    slideFade.closest('.wp-block-group').addClass('has-overflow-x-hidden')
+
+    scrollTrigger(slideFade, 100)
+    scrollTrigger($('.up-fade-effect'), 200)
+    scrollTrigger($('.flash-fade-effect'), 200)
 })
