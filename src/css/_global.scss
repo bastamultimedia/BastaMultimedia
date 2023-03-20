@@ -269,7 +269,7 @@ div{
   transition: ease-in-out 0.5s;
   opacity: 0;
   &.animate{
-    animation: flash 0.5s ease-in-out;
+    animation: flash 0.8s ease-in-out;
     opacity: 1;
   }
 }
