@@ -133,5 +133,5 @@ $(function (){
 
     scrollTrigger(slideFade, 100)
     scrollTrigger($('.up-fade-effect'), 200)
-    scrollTrigger($('.flash-fade-effect'), 200)
+    scrollTrigger($('.flash-fade-effect'), 100)
 })
