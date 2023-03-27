@@ -7,11 +7,11 @@ function wpdocs_theme_name_scripts() {
 }
 
 function myphpinformation_scripts() {
-    if( !is_admin()){
-        wp_deregister_script('jquery');
-        wp_register_script('jquery', get_template_directory_uri() . '/src/js/jquery-3.6.0.min.js', false);
-        wp_enqueue_script('jquery');
-    }
+    wp_deregister_script('jquery');
+    wp_register_script('jquery', get_template_directory_uri() . '/src/js/jquery-3.6.4.min.js', false);
+    wp_register_script('jquery-migrate', 'https://code.jquery.com/jquery-migrate-3.4.1.js', false);
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('jquery-migrate');
 }
 add_action( 'wp_enqueue_scripts', 'myphpinformation_scripts' );
 add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
