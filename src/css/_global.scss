@@ -1,5 +1,8 @@
 @import "responsive";
-@import "env";
+
+.content{
+  overflow-x: hidden;
+}
 
 h2{
   &.is-in-full-medium{
@@ -41,20 +44,6 @@ div{
       width: 1400px !important;
       margin: 0 auto;
     }
-  }
-  &.wp-block-group > *{
-    @include media-min(1550px){
-      max-width: 100%!important;
-    }
-  }
-}
-
-.flickity-slider{
-  display: flex;
-  align-items: center;
-  .carousel-cell{
-    display: flex;
-    justify-content: center;
   }
 }
 

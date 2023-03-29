@@ -1,18 +1,8 @@
 @charset "UTF-8";
-@keyframes flash {
-  0% {
-    transform: scale(0.8);
-  }
-  33% {
-    transform: scale(1);
-  }
-  66% {
-    transform: scale(0.9);
-  }
-  100% {
-    transform: scale(1);
-  }
+.content {
+  overflow-x: hidden;
 }
+
 h2.is-in-full-medium {
   width: 80%;
   margin: 0 auto;
@@ -56,20 +46,6 @@ strong, b {
     width: 1400px !important;
     margin: 0 auto;
   }
-}
-@media screen and (min-width: 1550px) {
-  div.wp-block-group > * {
-    max-width: 100% !important;
-  }
-}
-
-.flickity-slider {
-  display: flex;
-  align-items: center;
-}
-.flickity-slider .carousel-cell {
-  display: flex;
-  justify-content: center;
 }
 
 /* spécifications particulières */
@@ -220,59 +196,6 @@ strong, b {
   margin: 0;
   padding: 5%;
   bottom: 0;
-}
-
-/* slide fade effect */
-.slide-fade-effect {
-  transition: ease-in-out 0.5s;
-  opacity: 0;
-}
-.slide-fade-effect.left {
-  transform: translateX(-300px);
-}
-.slide-fade-effect.right {
-  transform: translateX(300px);
-}
-.slide-fade-effect.animate {
-  transform: translateX(0);
-  opacity: 1;
-}
-
-/* up fade effect */
-.up-fade-effect {
-  opacity: 0;
-  transform: translateY(100px);
-}
-.up-fade-effect:nth-of-type(1) {
-  transition: ease-in-out 0.5s;
-}
-.up-fade-effect:nth-of-type(2) {
-  transition: ease-in-out 0.6s;
-}
-.up-fade-effect:nth-of-type(3) {
-  transition: ease-in-out 0.7s;
-}
-.up-fade-effect:nth-of-type(4) {
-  transition: ease-in-out 0.8s;
-}
-.up-fade-effect.animate {
-  transform: translateY(0);
-  opacity: 1;
-}
-@media screen and (max-width: 782px) {
-  .up-fade-effect {
-    transition: ease-in-out 0.5s !important;
-  }
-}
-
-/* flash fade effect */
-.flash-fade-effect {
-  transition: ease-in-out 0.5s;
-  opacity: 0;
-}
-.flash-fade-effect.animate {
-  animation: flash 0.8s ease-in-out;
-  opacity: 1;
 }
 
 /*# sourceMappingURL=endpoint.css.map */

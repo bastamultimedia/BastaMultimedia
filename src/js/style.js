@@ -126,12 +126,4 @@ $(function (){
             aside_height()
         }
     }
-
-    let slideFade = $('.slide-fade-effect')
-
-    slideFade.closest('.wp-block-group').addClass('has-overflow-x-hidden')
-
-    scrollTrigger(slideFade, 100)
-    scrollTrigger($('.up-fade-effect'), 200)
-    scrollTrigger($('.flash-fade-effect'), 100)
 })
